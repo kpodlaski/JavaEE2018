@@ -8,19 +8,22 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="pp" class="model.Person"/>
+<%@ taglib
+        uri="http://java.sun.com/jsp/jstl/core"
+        prefix="c" %>
+<jsp:useBean id="pp" class="model.Person" scope="session">
+
+</jsp:useBean>
+
 <%
     DAO dao = new RamDAO();
     int id =   Integer.parseInt(request.getParameter("id"));
     Person p = dao.getPersonById(id);
-    pp=p;
-    /*
     pp.setName(p.getName());
     pp.setSurname(p.getSurname());
     pp.setFoto(p.getFoto());
-    */
-
 %>
+
 <html>
 <head>
     <title>${pp.name} ${pp.surname} </title>
@@ -42,5 +45,9 @@
         <img src="${pp.foto}" >
     </td></tr>
 </table>
+<jsp:useBean id="my_dao" class="dao.dao.basicimpl.RamDAO"/>
+<c:forEach var="person" items="${my_dao.allPersons}">
+    Item <c:out value="${person.name}"/><p>
+    </c:forEach>
 </body>
 </html>

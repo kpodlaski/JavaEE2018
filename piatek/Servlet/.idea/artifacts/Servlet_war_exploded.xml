@@ -8,6 +8,7 @@
           <element id="module-output" name="Servlet" />
         </element>
       </element>
+      <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
     </root>
   </artifact>
 </component>

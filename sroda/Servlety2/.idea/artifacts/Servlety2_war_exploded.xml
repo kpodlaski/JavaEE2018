@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="Servlety2:war exploded">
+  <artifact type="exploded-war" build-on-make="true" name="Servlety2:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/Servlety2_war_exploded</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="Servlety2/web/Web" />
@@ -8,6 +8,7 @@
           <element id="module-output" name="Servlety2" />
         </element>
       </element>
+      <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
     </root>
   </artifact>
 </component>
