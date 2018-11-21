@@ -1,0 +1,53 @@
+package model;
+
+/**
+ * Created by Krzysztof Podlaski on 14.11.2018.
+ */
+public class Pracownik {
+    private int id;
+    private String imie;
+    private String nazwisko;
+    private Stanowisko stanowisko;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getImie() {
+        return imie;
+    }
+
+    public void setImie(String imie) {
+        this.imie = imie;
+    }
+
+    public String getNazwisko() {
+        return nazwisko;
+    }
+
+    public void setNazwisko(String nazwisko) {
+        this.nazwisko = nazwisko;
+    }
+
+    public Stanowisko getStanowisko() {
+        return stanowisko;
+    }
+
+    public void setStanowisko(Stanowisko stanowisko) {
+        this.stanowisko = stanowisko;
+    }
+
+    @Override
+    public String toString() {
+        return "Pracownik{" +
+                "id=" + id +
+                ", imie='" + imie + '\'' +
+                ", nazwisko='" + nazwisko + '\'' +
+                ", stanowisko=" + stanowisko +
+                '}';
+    }
+}
