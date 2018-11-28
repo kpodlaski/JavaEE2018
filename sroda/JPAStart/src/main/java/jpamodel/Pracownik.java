@@ -5,7 +5,12 @@ import java.util.List;
 
 /**
  * Created by Krzysztof Podlaski on 28.11.2018.
- */
+ * */
+
+@NamedQuery(
+        name="Pracownik.findAll",
+        query="SELECT p FROM Pracownik p")
+
 @Entity
 public class Pracownik {
     private Integer id;
@@ -67,7 +72,8 @@ public class Pracownik {
     }
 
     @ManyToOne
-    @JoinColumn(name = "stanowisko")
+    @JoinColumn(name = "stanowisko",
+            referencedColumnName = "id")
     public Stanowisko getStanowisko() {
         return stanowisko;
     }
