@@ -54,12 +54,8 @@ public class Jednostka {
 
     @ManyToMany
     @JoinTable(name = "PracJednLnk",
-            catalog = "",
-            schema = "",
-            joinColumns = @JoinColumn(name = "id_jedn",
-                    referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "id_prac",
-                    referencedColumnName = "id"))
+            joinColumns = {@JoinColumn(name = "id_jedn")},
+            inverseJoinColumns = {@JoinColumn(name = "id_prac")})
     public List<Pracownik> getPracownicy() {
         return pracownicy;
     }

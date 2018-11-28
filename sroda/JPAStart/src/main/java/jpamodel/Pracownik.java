@@ -67,8 +67,7 @@ public class Pracownik {
     }
 
     @ManyToOne
-    @JoinColumn(name = "stanowisko",
-            referencedColumnName = "id")
+    @JoinColumn(name = "stanowisko")
     public Stanowisko getStanowisko() {
         return stanowisko;
     }
