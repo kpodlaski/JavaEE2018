@@ -6,6 +6,9 @@ import java.util.List;
 /**
  * Created by Krzysztof Podlaski on 30.11.2018.
  */
+@NamedQuery(name = "Pracownik.byImie",
+query = "Select p From Pracownik p where p.imie = :imie")
+
 @Entity
 public class Pracownik {
     private Integer id;
