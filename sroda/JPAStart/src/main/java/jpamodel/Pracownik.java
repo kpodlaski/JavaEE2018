@@ -6,11 +6,16 @@ import java.util.List;
 /**
  * Created by Krzysztof Podlaski on 28.11.2018.
  * */
+@NamedQueries({
+        @NamedQuery(
+                name = "Pracownik.findAll",
+                query = "SELECT p FROM Pracownik p"),
 
-@NamedQuery(
-        name="Pracownik.findAll",
-        query="SELECT p FROM Pracownik p")
-
+        @NamedQuery(
+                name = "Pracownik.findByImie",
+                query = "SELECT p FROM Pracownik p " +
+                        "WHERE p.imie=:imie")
+})
 @Entity
 public class Pracownik {
     private Integer id;

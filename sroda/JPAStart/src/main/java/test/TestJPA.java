@@ -29,6 +29,12 @@ public class TestJPA {
         for(Pracownik os : (List<Pracownik>) q.getResultList()){
             System.out.println(os.getImie()+ " "+ os.getNazwisko());
         }
+        System.out.println("==========");
+        q = em.createNamedQuery("Pracownik.findByImie");
+        q.setParameter("imie","Agata");
+        for(Pracownik os : (List<Pracownik>) q.getResultList()){
+            System.out.println(os.getImie()+ " "+ os.getNazwisko());
+        }
         em.close();
     }
 }
