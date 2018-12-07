@@ -1,5 +1,7 @@
 package start;
 
+import dao.DAO;
+import dao.jpa.DAOJPAimpl;
 import jpamodel.Jednostka;
 import jpamodel.Pracownik;
 
@@ -14,6 +16,26 @@ import java.util.List;
  */
 public class JPAEx {
     public static void main(String[] args) {
+        DAO dao= new DAOJPAimpl();
+        Pracownik p = dao.getPracownikById(3);
+        System.out.println(p.getImie());
+        System.out.println(p.getNazwisko());
+        for ( Jednostka j : p.getJednostki()){
+            System.out.println(j.getNazwa());
+        }
+        System.out.println("==============");
+        List<Pracownik> w =
+                dao.getPracownikByImie("Juliusz");
+        for (Pracownik wp : w){
+            System.out.println(wp.getImie());
+            System.out.println(wp.getNazwisko());
+            for ( Jednostka j : wp.getJednostki()){
+                System.out.println(j.getNazwa());
+            }
+            System.out.println("---");
+        }
+    }
+    public static void main_old(String[] args) {
         EntityManagerFactory emf = Persistence
         .createEntityManagerFactory("PracownicyDB");
         EntityManager em = emf.createEntityManager();
