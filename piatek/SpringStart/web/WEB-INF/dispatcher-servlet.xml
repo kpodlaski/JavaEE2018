@@ -31,7 +31,8 @@
           p:indentOutput="true" p:simpleDateFormat="yyyy-MM-dd"
           p:modulesToInstall="com.fasterxml.jackson.module.paramnames.ParameterNamesModule" />
 
-    <bean id="xmlMapper" parent="jsonMapper" p:createXmlMapper="true" />
+    <bean id="xmlMapper" parent="jsonMapper"
+          p:createXmlMapper="true" />
 
 
     <bean
