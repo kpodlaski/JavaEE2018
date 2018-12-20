@@ -11,7 +11,8 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:component-scan base-package="controllers" />
-
+    <bean class="controllers.forms.model.Contacts"
+          name="contacts"/>
 
     <mvc:annotation-driven>
         <mvc:message-converters>
