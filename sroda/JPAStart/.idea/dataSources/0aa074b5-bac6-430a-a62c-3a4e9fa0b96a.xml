@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="pracownicy.db">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="3" parent="2" name="Pracownicy"/>
+    <table id="4" parent="2" name="Stanowisko"/>
+    <column id="5" parent="3" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+    </column>
+    <column id="6" parent="3" name="imie">
+      <Position>2</Position>
+      <DataType>TEXT(0,-1)|12</DataType>
+    </column>
+    <column id="7" parent="3" name="nazwisko">
+      <Position>3</Position>
+      <DataType>TEXT(0,-1)|12</DataType>
+    </column>
+    <column id="8" parent="3" name="stanowisko">
+      <Position>4</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+    </column>
+    <key id="9" parent="3">
+      <ColNames>`id`)
+FOREIGN KEY(`stanowisko`</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="10" parent="3" name="#FAKE_Pracownicy_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>stanowisko</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>Stanowisko</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>no-action</OnDelete>
+      <OnUpdate>no-action</OnUpdate>
+    </foreign-key>
+    <column id="11" parent="4" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+    </column>
+    <column id="12" parent="4" name="name">
+      <Position>2</Position>
+      <DataType>TEXT(0,-1)|12</DataType>
+    </column>
+    <key id="13" parent="4">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+
+    <persistence-unit name="PracownicyDB">
+        <class>jpamodel.Jednostka</class>
+        <class>jpamodel.Pracownik</class>
+        <class>jpamodel.Stanowisko</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:sqlite:D:/Users/Krzysztof Podlaski/git/JavaEE2018/piatek/jdbc/pracownicy.db"/>
+            <property name="javax.persistence.jdbc.driver"
+                      value="org.sqlite.JDBC"/>
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.SQLiteDialect" />
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>

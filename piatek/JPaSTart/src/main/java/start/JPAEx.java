@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class JPAEx {
     public static void main(String[] args) {
-        DAO dao= new DAOJPAimpl();
+        DAO dao= DAOJPAimpl.newInstance();
         Pracownik p = dao.getPracownikById(3);
         System.out.println(p.getImie());
         System.out.println(p.getNazwisko());

@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="SpringStart:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/SpringStart_war_exploded</output-path>
+    <root id="archive" name="SpringStart_war exploded.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="SpringStart" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="SpringStart/web/Web" />
+    </root>
+  </artifact>
+</component>

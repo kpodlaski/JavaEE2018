@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="pracownicy.db [2]">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="3" parent="2" name="Jednostka"/>
+    <table id="4" parent="2" name="PracJednLnk"/>
+    <table id="5" parent="2" name="Pracownik"/>
+    <table id="6" parent="2" name="Stanowisko"/>
+    <column id="7" parent="3" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+    </column>
+    <column id="8" parent="3" name="nazwa">
+      <Position>2</Position>
+      <DataType>TEXT(0,-1)|12</DataType>
+    </column>
+    <key id="9" parent="3">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="10" parent="4" name="id_prac">
+      <Position>1</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+    </column>
+    <column id="11" parent="4" name="id_jedn">
+      <Position>2</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+    </column>
+    <column id="12" parent="5" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+    </column>
+    <column id="13" parent="5" name="imie">
+      <Position>2</Position>
+      <DataType>TEXT(0,-1)|12</DataType>
+    </column>
+    <column id="14" parent="5" name="nazwisko">
+      <Position>3</Position>
+      <DataType>TEXT(0,-1)|12</DataType>
+    </column>
+    <column id="15" parent="5" name="stanowisko">
+      <Position>4</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+    </column>
+    <key id="16" parent="5">
+      <ColNames>`id`)
+FOREIGN KEY(`stanowisko`</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="17" parent="5" name="#FAKE_Pracownik_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>stanowisko</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>Stanowisko</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>no-action</OnDelete>
+      <OnUpdate>no-action</OnUpdate>
+    </foreign-key>
+    <column id="18" parent="6" name="id">
+      <Position>1</Position>
+      <DataType>INTEGER(0,-1)|4</DataType>
+    </column>
+    <column id="19" parent="6" name="nazwa">
+      <Position>2</Position>
+      <DataType>TEXT(0,-1)|12</DataType>
+    </column>
+    <key id="20" parent="6">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

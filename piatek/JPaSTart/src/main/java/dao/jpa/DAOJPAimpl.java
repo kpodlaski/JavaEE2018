@@ -11,6 +11,10 @@ import java.util.List;
  * Created by Krzysztof Podlaski on 07.12.2018.
  */
 public class DAOJPAimpl implements DAO {
+    public static DAO newInstance(){
+        return new DAOJPAimpl();
+    }
+
     public Pracownik getPracownikById(int id) {
         return null;
     }
