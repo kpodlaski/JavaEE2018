@@ -18,6 +18,15 @@ function loadData() {
             col.innerText
                 = item.lastName;
             row.appendChild(col);
+            col = document.createElement("td");
+            btn = document.createElement("button");
+            btn.innerText="X";
+            btn.addEventListener("click",function(){
+                console.log(item._links.person);
+                deleteElement(item._links.person);
+            })
+            col.appendChild(btn);
+            row.appendChild(col);
             document.getElementById("people_tbl")
                 .appendChild(row);
         });
@@ -49,3 +58,7 @@ submit_btn.addEventListener("click",function(event){
         console.log(msg);
     })
 });
+
+function deleteElement(el_url){
+    console.log(el_url);
+}
